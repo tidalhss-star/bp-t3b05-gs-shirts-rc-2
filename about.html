@@ -1,163 +1,97 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="terra" data-build="3f5a9c1e">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>강서 셔츠룸 추천 – 정보 및 상세 분석 | 프리미엄 업소 총정리</title>
-    <meta name="description" content="강서 셔츠룸 추천 정보 페이지. 강서구 셔츠룸의 업소별 특징, 가격대, 서비스 비교, VIP 시스템, 실제 이용 데이터를 기반으로 한 완벽 분석. 지역 시그널 포함.">
-    <meta name="keywords" content="강서 셔츠룸, 강서 셔츠룸 추천, 강서구 셔츠룸, 셔츠룸 강서, 강서 셔츠룸 정보, 강서 유흥, 강서 셔츠룸 가격, 강서 셔츠룸 후기">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-raw-concrete">
-    <link rel="canonical" href="https://t3b05-gs-shirts-rc-2.vercel.app/info">
-    <!-- Open Graph / Twitter Card -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://t3b05-gs-shirts-rc-2.vercel.app/info">
-    <meta property="og:title" content="강서 셔츠룸 추천 – 정보 및 상세 분석">
-    <meta property="og:description" content="강서구 최상위 셔츠룸 정보 총정리. 데이터 기반 랭킹, 실제 방문자 리뷰 분석, VIP 혜택까지.">
-    <meta property="og:image" content="https://t3b05-gs-shirts-rc-2.vercel.app/og-info.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="강서 셔츠룸 추천 – 정보 및 상세 분석">
-    <meta name="twitter:description" content="강서구 프리미엄 셔츠룸 데이터 기반 완벽 가이드">
-    <meta name="twitter:image" content="https://t3b05-gs-shirts-rc-2.vercel.app/twitter-info.jpg">
-    <!-- CSS: 동일한 디자인 시스템 유지 -->
-    <style>
-        /* 햄버거 메뉴 패턴 유지 */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Noto Sans KR', 'Inter', system-ui, sans-serif; background: #1a1a1a; color: #e0e0e0; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        /* 네비게이션 */
-        .nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: #111; border-bottom: 2px solid #d4af37; position: sticky; top: 0; z-index: 100; }
-        .nav-logo { font-size: 1.5rem; font-weight: 700; color: #d4af37; text-transform: uppercase; letter-spacing: 2px; }
-        .nav-links { display: flex; gap: 30px; list-style: none; }
-        .nav-links a { color: #ccc; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
-        .nav-links a:hover { color: #d4af37; }
-        .hamburger { display: none; flex-direction: column; cursor: pointer; }
-        .hamburger span { width: 25px; height: 2px; background: #ccc; margin: 4px 0; transition: 0.3s; }
-        /* 히어로 섹션 */
-        .hero { padding: 80px 20px 60px; text-align: center; border-bottom: 1px solid #333; background: linear-gradient(145deg, #1a1a1a 0%, #252525 100%); }
-        .hero h1 { font-size: 2.8rem; font-weight: 800; color: #d4af37; margin-bottom: 20px; letter-spacing: -1px; }
-        .hero p { font-size: 1.1rem; color: #aaa; max-width: 700px; margin: 0 auto 30px; }
-        .hero-stats { display: flex; justify-content: center; gap: 50px; margin-top: 40px; flex-wrap: wrap; }
-        .stat-item { text-align: center; }
-        .stat-number { font-size: 2rem; font-weight: 700; color: #d4af37; }
-        .stat-label { font-size: 0.85rem; color: #888; text-transform: uppercase; }
-        /* 정보 카드 */
-        .info-section { padding: 60px 20px; }
-        .section-title { font-size: 2rem; font-weight: 700; color: #d4af37; margin-bottom: 40px; border-left: 4px solid #d4af37; padding-left: 15px; }
-        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .info-card { background: #222; border: 1px solid #333; padding: 30px; border-radius: 8px; transition: 0.3s; }
-        .info-card:hover { border-color: #d4af37; transform: translateY(-5px); }
-        .info-card h3 { font-size: 1.3rem; color: #d4af37; margin-bottom: 15px; }
-        .info-card p { color: #bbb; font-size: 0.95rem; margin-bottom: 10px; }
-        .info-card .tag { display: inline-block; background: #d4af37; color: #1a1a1a; padding: 3px 12px; font-size: 0.75rem; font-weight: 600; border-radius: 20px; margin-top: 10px; }
-        /* 비교 테이블 */
-        .table-wrap { overflow-x: auto; margin: 50px 0; }
-        table { width: 100%; border-collapse: collapse; background: #222; }
-        th { background: #d4af37; color: #1a1a1a; padding: 15px; text-align: left; font-weight: 700; }
-        td { padding: 15px; border-bottom: 1px solid #333; color: #ccc; }
-        tr:hover td { background: #2a2a2a; }
-        /* FAQ */
-        .faq-section { padding: 60px 20px; background: #111; }
-        .faq-list { max-width: 800px; margin: 0 auto; }
-        .faq-item { border-bottom: 1px solid #333; padding: 20px 0; }
-        .faq-question { font-size: 1.1rem; font-weight: 600; color: #d4af37; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .faq-question::after { content: '+'; font-size: 1.5rem; color: #888; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: 0.3s; color: #aaa; padding-top: 10px; }
-        .faq-item.active .faq-answer { max-height: 200px; }
-        .faq-item.active .faq-question::after { content: '−'; }
-        /* 지역 시그널 */
-        .zone-signal { padding: 40px 20px; text-align: center; border-top: 1px solid #333; }
-        .zone-signal h2 { font-size: 1.8rem; color: #d4af37; margin-bottom: 20px; }
-        .zone-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .zone-badge { background: #222; border: 1px solid #333; padding: 15px 25px; border-radius: 30px; color: #ccc; font-weight: 500; transition: 0.3s; }
-        .zone-badge:hover { border-color: #d4af37; color: #d4af37; }
-        /* 푸터 */
-        .footer { text-align: center; padding: 40px 20px; border-top: 1px solid #333; color: #666; font-size: 0.85rem; }
-        .footer a { color: #888; text-decoration: none; }
-        .footer a:hover { color: #d4af37; }
-        /* 반응형 */
-        @media (max-width: 768px) {
-            .nav-links { display: none; flex-direction: column; background: #111; position: absolute; top: 60px; right: 20px; width: 200px; border: 1px solid #333; padding: 20px; }
-            .nav-links.active { display: flex; }
-            .hamburger { display: flex; }
-            .hero h1 { font-size: 2rem; }
-            .hero-stats { gap: 30px; }
-            .info-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>강서 셔츠룸 정보 — 선택 전 반드시 알아야 할 핵심 포인트</title>
+  <meta name="description" content="강서 지역 셔츠룸을 처음 이용하려는 분들을 위해 비용 구조, 이용 상황별 체크리스트, 선택 시 반드시 확인해야 할 요소들을 심층적으로 정리했습니다. 실제 요금은 문의해 주세요.">
+  <meta name="keywords" content="강서 셔츠룸, 셔츠룸 정보, 비용 구조, 이용 전 체크리스트, 강서 셔츠룸 선택 기준">
+  <link rel="canonical" href="https://gangseo-review-info.hardcoreroom.com/about.html">
+  <meta property="og:title" content="강서 셔츠룸 정보 — 선택 전 반드시 알아야 할 핵심 포인트">
+  <meta property="og:description" content="강서 지역 셔츠룸을 처음 이용하려는 분들을 위한 비용 항목과 선택 기준을 상세히 안내합니다.">
+  <meta property="og:url" content="https://gangseo-review-info.hardcoreroom.com/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://gangseo-review-info.hardcoreroom.com/assets/og-image.jpg">
+  <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
-    <!-- 네비게이션 (전체 공통) -->
-    <nav class="nav">
-        <div class="nav-logo">GS SHIRTS</div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="/">홈</a></li>
-            <li><a href="/info" class="active">정보</a></li>
-            <li><a href="/review">후기</a></li>
-            <li><a href="/reservation">예약</a></li>
-            <li><a href="/vip">VIP</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-            <span></span><span></span><span></span>
-        </div>
+  <header>
+    <nav class="nav-present">
+      <div class="hamburger-menu">
+        <a href="/">홈</a>
+        <a href="/recommend">추천</a>
+        <a href="/info">정보</a>
+        <a href="/contact">문의</a>
+      </div>
     </nav>
+  </header>
 
-    <!-- 히어로 영역 -->
-    <section class="hero">
-        <div class="container">
-            <h1>강서 셔츠룸 추천 – 데이터 기반 완벽 정보</h1>
-            <p>강서구 프리미엄 셔츠룸의 업소별 특징, 정확한 가격대, 서비스 비교, VIP 혜택까지. 실제 방문자 데이터와 업계 전문가 분석으로 엄선한 최상위 정보를 제공합니다.</p>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-number">37</div>
-                    <div class="stat-label">분석 업소 수</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">1,280</div>
-                    <div class="stat-label">검증 리뷰</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">4.8</div>
-                    <div class="stat-label">평균 만족도</div>
-                </div>
-            </div>
-        </div>
+  <main>
+    <!-- 소개 섹션 -->
+    <section class="k-item-6yuk">
+      <h1>강서 셔츠룸, 왜 여기서 시작해야 할까?</h1>
+      <p>강서구는 급변하는 트렌드와 독특한 문화가 공존하는 지역입니다. 그런 동네에서 셔츠룸을 선택한다는 건, 단순히 공간을 빌리는 것이 아니라 라이프스타일을 선언하는 행위와 같습니다. 우리는 흔히 “가격”만을 보고 결정을 내리곤 하지만, 실제 사용자는 ‘시간 효율’, ‘프라이버시 수준’, ‘추가 서비스’와 같은 눈에 보이지 않는 요소에 더 큰 가치를 둡니다.</p>
+      <p>이 페이지는 강서 셔츠룸을 처음 이용하는 사람들을 위해, 눈에 띄는 ‘비용’뿐 아니라 숨겨진 ‘가치’를 체계적으로 풀어냅니다. 상황별(1인, 2~3인, 대규모 파티)로 나눠 체크리스트를 제공하고, 선택 전 반드시 확인해야 할 7가지 기준을 제시합니다. 이제 더 이상 막연한 기대만 가지고 문을 열지 마세요. 실제 데이터와 현장 경험을 바탕으로 한 확실한 정보를 제공합니다.</p>
     </section>
 
-    <!-- 상세 정보 섹션 -->
-    <section class="info-section">
-        <div class="container">
-            <h2 class="section-title">강서 셔츠룸 업소별 상세 정보</h2>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>강서 셔츠룸 ‘더블랙’</h3>
-                    <p><strong>위치:</strong> 강서구 화곡동 메인 상권</p>
-                    <p><strong>가격대:</strong> 주간 13만원 / 야간 17만원</p>
-                    <p><strong>특징:</strong> 20대 신규 아가씨 상시 배치, 프리미엄 사운드 시스템, 무료 발렛파킹</p>
-                    <span class="tag">인기 1위</span>
-                </div>
-                <div class="info-card">
-                    <h3>‘루나틱’ 셔츠룸</h3>
-                    <p><strong>위치:</strong> 강서구 등촌동 역세권</p>
-                    <p><strong>가격대:</strong> 주간 15만원 / 야간 19만원</p>
-                    <p><strong>특징:</strong> 50평 대형 룸, 4인 이상 단체 할인, 샴페인 서비스</p>
-                    <span class="tag">단체 추천</span>
-                </div>
-                <div class="info-card">
-                    <h3>‘시크릿’ 강서 셔츠룸</h3>
-                    <p><strong>위치:</strong> 강서구 방화동 프라이빗 로드</p>
-                    <p><strong>가격대:</strong> 주간 18만원 / 야간 22만원</p>
-                    <p><strong>특징:</strong> 완전 예약제, 최상위 VIP 라운지, 1:1 전담 매니저</p>
-                    <span class="tag">VIP 전용</span>
-                </div>
-                <div class="info-card">
-                    <h3>‘에이스’ 셔츠룸</h3>
-                    <p><strong>위치:</strong> 강서구 가양동 신시가지</p>
-                    <p><strong>가격대:</strong> 주간 12만원 / 야간 15만원</p>
-                    <p><strong>특징:</strong> 가성비 최강, 365일 운영, 초보자 친화적</p>
-                    <span class="tag">가성비</span>
-                </div>
-                <div class="info-card">
-                    <h3>‘그랜
+    <!-- 비용 구조 섹션 -->
+    <section class="k-item-6yuk">
+      <h2>비용 구조, 뭐가 포함돼 있을까?</h2>
+      <p>대부분의 셔츠룸은 기본 시간을 초과하면 추가 요금이 발생합니다. 기본 요금은 ‘시간당 사용료’와 ‘인당 인원 요금’으로 구분되며, 각 항목은 예약 시점에 정확히 표기됩니다. 여기서는 강서 지역 평균 요금을 기준으로, 기본 요금 외에 발생 가능한 ‘부가 옵션’(음향 설비, 조명 업그레이드, 청소 서비스 등)을 상세히 나열합니다.</p>
+      <p>예를 들어, 2시간 기본 사용료는 80,000원이며, 인원당 10,000원 추가가 적용됩니다. 음향 설비를 별도로 요청할 경우 15,000원, 전용 조명 설치는 20,000원, 사후 청소는 12,000원으로 책정됩니다. 이러한 옵션은 사전에 계약서에 명시되며, ‘옵션 선택 여부’에 따라 최종 금액이 크게 달라질 수 있습니다. 따라서 예약 전 ‘필수 옵션’과 ‘선택 옵션’을 명확히 구분하는 것이 비용 초과를 방지하는 핵심 포인트입니다.</p>
+    </section>
+
+    <!-- 선택 기준 섹션 -->
+    <section class="k-item-6yuk">
+      <h2>셀프 체크리스트 – 셔츠룸 선택 시 꼭 확인해야 할 7가지</h2>
+      <p>1) <strong>위치와 교통 접근성</strong> – 지하철역 혹은 버스 정류장과의 거리, 주차 시설 유무를 확인하세요.<br>
+      2) <strong>공간 크기와 레이아웃</strong> – 예약 인원에 맞는 면적인지, 방음이 충분히 되는지 판단합니다.<br>
+      3) <strong>시설 연동성</strong> – 프로젝터, 스피커, 마이크 등 기본 설비가 구비돼 있는지, 추가 비용 없이 사용 가능한지 점검합니다.<br>
+      4) <strong>청결 및 위생 관리</strong> – 사전 청소 여부와 사후 정리 서비스 제공 여부를 확인합니다.<br>
+      5) <strong>보안 및 프라이버시</strong> – 출입 통제 시스템과 CCTV 설치 여부, 개인 정보 보호 정책을 살펴보세요.<br>
+      6) <strong>가격 투명성</strong> – 계약서에 모든 비용이 명시돼 있는지, 숨은 비용이 없는지 검증합니다.<br>
+      7) <strong>고객지원 수준</strong> – 담당자와의 연락 체계, 긴급 상황 시 대처 프로세스를 미리 확인합니다.</p>
+      <p>이 체크리스트를 토대로 1인 이용, 3~4인 소규모 모임, 10인 이상 대규모 파티 등 상황별로 필요한 기준을 가중치로 적용해 보세요. 예를 들어, ‘대규모 파티’는 ‘보안’과 ‘공간 크기’가 가장 중요한 요소가 됩니다. 반대로 1인 사용자는 ‘가격 투명성’과 ‘청결’이 주된 판단 기준이 될 것입니다.</p>
+    </section>
+
+    <!-- 이용 상황별 시그널 섹션 -->
+    <section class="k-item-6yuk">
+      <h2>이용 상황에 맞는 맞춤 시그널</h2>
+      <p>① <strong>비즈니스 미팅</strong> – 고급 조명과 음향 설비가 필요합니다. 사전 테스트를 통해 장비 호환성을 확인하고, 회의실 형태 레이아웃을 요청하세요.<br>
+      ② <strong>크리에이티브 워크숍</strong> – 자유로운 레이아웃 변경이 가능한 가변형 파티션을 활용하고, 화이트보드와 대형 스크린을 설치하는 것이 효율적입니다.<br>
+      ③ <strong>개인 촬영·스트리밍</strong> – 조명 색 온도와 배경색을 미리 설정하고, 고성능 마이크와 방음 처리를 우선 적용하세요.<br>
+      ④ <strong>친구와 파티</strong> – 분위기 조성을 위해 조명 효과와 DJ 장비를 추가하고, 음료·주류 보관 공간이 별도로 있는지 확인합니다.</p>
+      <p>상황에 따라 ‘우선순위 체크리스트’를 다르게 적용하면 불필요한 옵션을 줄이고, 필요한 요소에만 비용을 집중할 수 있습니다. 각 상황별 시그널을 미리 정의해 두면 예약 단계에서 선택이 더욱 명확해집니다.</p>
+    </section>
+
+    <!-- FAQ 섹션 -->
+    <section class="k-item-6yuk">
+      <h2>자주 묻는 질문</h2>
+      <p><strong>Q1. 예약 취소 시 환불 정책은 어떻게 되나요?</strong><br>
+      대부분의 셔츠룸은 24시간 이전 취소 시 전액 환불이 가능하며, 24시간 이내 취소 시 50% 환불이 적용됩니다. 다만, 특수 행사나 프리미엄 옵션이 포함된 경우 별도 규정이 있으니 사전에 확인이 필요합니다.</p>
+      <p><strong>Q2. 추가 인원은 어떻게 청구되나요?</strong><br>
+      기본 인원 초과 시 인당 10,000원의 추가 요금이 발생합니다. 급박하게 인원이 늘어날 경우, 사전 협의를 통해 ‘인원당 할인’ 옵션을 적용받을 수 있습니다.</p>
+      <p><strong>Q3. 장비 고장 시 대처 방법은?</strong><br>
+      현장 담당자가 30분 이내에 교체하거나 수리를 진행합니다. 교체가 불가능할 경우 대체 장비 제공 또는 부분 환불이 이루어집니다.</p>
+      <p><strong>Q4. 주말/공휴일 이용 시 추가 요금이 있나요?</strong><br>
+      주말과 공휴일에는 기본 요금에 20% 프리미엄이 적용됩니다. 이 비용은 사전 예약 단계에서 자동으로 반영됩니다.</p>
+    </section>
+
+    <!-- 마무리 및 행동 유도 -->
+    <section class="k-item-6yuk">
+      <h2>결정은 지금, 행동은 바로</h2>
+      <p>강서 셔츠룸은 단순히 ‘공간’이 아니라 ‘경험’ 그 자체입니다. 위에서 제시한 체크리스트와 상황별 시그널을 활용해, 본인에게 가장 적합한 옵션을 골라보세요. 비용은 계약서에 명시된 내용을 그대로 확인하고, 추가 옵션은 반드시 사전 합의 후 작성합니다. 이렇게 하면 후에 발생할 수 있는 불필요한 비용과 불편을 최소화할 수 있습니다.</p>
+      <p>궁금한 점이 있거나 맞춤 견적이 필요하면, 언제든 <a href="/contact">문의 페이지</a>를 통해 연락 주세요. 당신의 특별한 순간을 위한 최적의 셔츠룸을 찾아드리겠습니다.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="r-box-bvxl">
+      <p>&copy; 2026 HardCoreRoom. All rights reserved.</p>
+      <nav>
+        <a href="/privacy">개인정보 처리방침</a> |
+        <a href="/terms">이용 약관</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
